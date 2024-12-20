@@ -23,7 +23,7 @@ const ConverLongiAndLati = async () => {
 
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&limit=5&appid=6b556005dae9d19ffd7918ac69d92c9f`,
+      `https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&limit=5&appid=6b556005dae9d19ffd7918ac69d92c9f`,
       {
         method: "GET",
       }
@@ -140,7 +140,7 @@ const fetchWeatherData = async (cityLogitude, cityLatitude) => {
     humi.textContent = humidity;
     wind.textContent = windSpeed;
 
-    img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
     // console.log("weather:", data.weather[0].main);
     let type = data.weather[0].main;
